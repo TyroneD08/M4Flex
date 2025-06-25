@@ -15,7 +15,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+      
+        NewsItem item = new NewsItem()
+        {
+            Title = "Mijn eerste model",
+            Content = "Was niet zo moeilijk om te maken",
+            ImageUrl = "img/newsitem.PNG"
+        };
+        return View(item);
     }
 
     public IActionResult Privacy()
